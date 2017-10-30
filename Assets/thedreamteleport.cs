@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class thedreamteleport : MonoBehaviour {
 
@@ -10,7 +11,10 @@ public class thedreamteleport : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Application.LoadLevel( 2);
+		Scene sceneToLoad = SceneManager.GetSceneByName("the dream");
+		SceneManager.LoadScene(sceneToLoad.name, LoadSceneMode.Additive);
+		SceneManager.MoveGameObjectToScene(other.gameObject, sceneToLoad);
+
 	}
 
 
