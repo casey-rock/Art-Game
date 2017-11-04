@@ -42,6 +42,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+		//create bullet
+		public GameObject bulletPrefab;
+		public Transform bulletSpawn;
+
         // Use this for initialization
         private void Start()
         {
@@ -81,7 +85,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+			//Fire on click
+			if(Input.GetMouseButtonDown(0)){
+				Fire();
+			}
         }
+
+		//Fire function
+		void Fire(){
+			//create bullet
+			var bullet = (GameObject)Instantiate (
+				bulletPrefab,
+				bulletSpawn.position,
+				bulletSpawn.rotation);
+
+			// Add velocity to the bullet
+			bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+
+			// Destroy the bullet after 2 seconds
+			Destroy(bullet, 2.0f); 
+		}
 
 
         private void PlayLandingSound()
