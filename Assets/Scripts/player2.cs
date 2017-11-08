@@ -15,7 +15,7 @@ public class player2 : MonoBehaviour
         transform.Translate(0, 0, z);
 
 		//Fire on space
-		if(Input.GetKeyDown(KeyCode.Space)){
+		if(Input.GetMouseButtonDown(1)){
 			Fire();
 		}
     }
