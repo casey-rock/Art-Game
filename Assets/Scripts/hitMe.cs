@@ -17,7 +17,7 @@ public class hitMe : MonoBehaviour {
 //this detect if player 1 is in 'hit area' to pick up object
 	void OnTriggerEnter (Collider col)
 	{
-		if(col.gameObject.name == "Player1")
+		if(col.gameObject.name == "FPSController")
 	{
 			Debug.Log("hit");
 
@@ -29,7 +29,7 @@ public class hitMe : MonoBehaviour {
 	//this detects if player has left the 'hit area' and disbales ability to pick up object
 		void OnTriggerExit(Collider col)
 	{
-		if(col.gameObject.name == "player1")
+		if(col.gameObject.name == "FPSController")
 	{
 			Debug.Log("exit");
 
