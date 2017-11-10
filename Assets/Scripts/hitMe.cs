@@ -42,7 +42,7 @@ public class hitMe : MonoBehaviour {
 
 //this says if player is in 'hit area' and they press the right key, they will pick up object
 	void Update(){
-		if(playerInTrigger && Input.GetKeyDown("space")){
+		if(playerInTrigger && (Input.GetKeyDown("space") || Input.GetButtonDown("Submit"))){
            item.GetComponent<Rigidbody>().useGravity = false;
 		item.GetComponent<Rigidbody>().isKinematic = true;
 		item.transform.position = guide.transform.position;
