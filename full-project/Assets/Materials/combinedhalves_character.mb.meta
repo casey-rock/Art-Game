@@ -3,7 +3,7 @@ guid: 358526f05be4b004692818f8468c49dc
 timeCreated: 1509669701
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCylinder1
@@ -11,37 +11,50 @@ ModelImporter:
     100006: pCylinder7
     100008: pSphere1
     100010: pSphere2
+    100012: pSphere3
     400000: //RootNode
     400002: pCylinder1
     400004: pCylinder2
     400006: pCylinder7
     400008: pSphere1
     400010: pSphere2
+    400012: pSphere3
     2300000: pCylinder1
     2300002: pCylinder2
     2300004: pCylinder7
     2300006: pSphere1
     2300008: pSphere2
+    2300010: pSphere3
     3300000: pCylinder1
     3300002: pCylinder2
     3300004: pCylinder7
     3300006: pSphere1
     3300008: pSphere2
+    3300010: pSphere3
     4300000: pSphere1
     4300002: pCylinder1
     4300004: pCylinder2
     4300006: pSphere2
     4300008: pCylinder7
+    4300010: pSphere3
     6400000: pCylinder1
     6400002: pCylinder2
     6400004: pCylinder7
     6400006: pSphere1
     6400008: pSphere2
+    6400010: pSphere3
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c7d7f51dfc658f3469bf17e477b8b710, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -54,6 +67,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
