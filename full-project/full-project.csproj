@@ -218,14 +218,16 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\dropMe.cs" />
     <Compile Include="Assets\Scripts\hitMe.cs" />
+    <Compile Include="Assets\Scripts\p1\p1cameraControl.cs" />
     <Compile Include="Assets\Scripts\p1\p1drop.cs" />
     <Compile Include="Assets\Scripts\p1\p1pickup.cs" />
     <Compile Include="Assets\Scripts\p1\p1scorecontrol.cs" />
+    <Compile Include="Assets\Scripts\p1\player1.cs" />
+    <Compile Include="Assets\Scripts\p2\p2cameraControl.cs" />
     <Compile Include="Assets\Scripts\p2\p2drop.cs" />
     <Compile Include="Assets\Scripts\p2\p2pickUp.cs" />
     <Compile Include="Assets\Scripts\p2\p2scoreControl.cs" />
-    <Compile Include="Assets\Scripts\player1.cs" />
-    <Compile Include="Assets\Scripts\player2.cs" />
+    <Compile Include="Assets\Scripts\p2\player2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
