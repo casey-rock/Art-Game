@@ -53,11 +53,16 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\dropMe.cs" />
      <Compile Include="Assets\Scripts\hitMe.cs" />
-     <Compile Include="Assets\Scripts\p2drop.cs" />
-     <Compile Include="Assets\Scripts\p2pickUp.cs" />
-     <Compile Include="Assets\Scripts\p2scoreControl.cs" />
-     <Compile Include="Assets\Scripts\player1.cs" />
-     <Compile Include="Assets\Scripts\player2.cs" />
+     <Compile Include="Assets\Scripts\p1\p1cameraControl.cs" />
+     <Compile Include="Assets\Scripts\p1\p1drop.cs" />
+     <Compile Include="Assets\Scripts\p1\p1pickup.cs" />
+     <Compile Include="Assets\Scripts\p1\p1scorecontrol.cs" />
+     <Compile Include="Assets\Scripts\p1\player1.cs" />
+     <Compile Include="Assets\Scripts\p2\p2cameraControl.cs" />
+     <Compile Include="Assets\Scripts\p2\p2drop.cs" />
+     <Compile Include="Assets\Scripts\p2\p2pickUp.cs" />
+     <Compile Include="Assets\Scripts\p2\p2scoreControl.cs" />
+     <Compile Include="Assets\Scripts\p2\player2.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
@@ -82,23 +87,14 @@
  <Reference Include="UnityEngine.Timeline">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UIAutomation">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/chh635/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/Catnip/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/chh635/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/Catnip/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

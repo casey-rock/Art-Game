@@ -42,17 +42,22 @@ void Start () {
 		}
 	}
 
+	void OnTriggerExit(Collider col)
+	{
+		playerInTrigger = false;
+	}
+
 //this says if player is in 'drop area' and they press the right key, they will pick up object
 	void Update(){
 
-			if(playerInTrigger && Input.GetKeyDown(KeyCode.RightShift) && item.transform.IsChildOf(tempParent.transform)){
+		if(playerInTrigger && (Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.RightShift)) && item.transform.IsChildOf(tempParent.transform)){
 			item.GetComponent<Rigidbody>().useGravity = false;
 			item.GetComponent<Rigidbody>().isKinematic = false;
-			item.transform.parent = null;
+			item.transform.SetParent(drop);
 			item.transform.position = drop.transform.position;
 			Destroy(item.GetComponent<Collider>());
 			gameController1.AddScore (-1);
 			}
 				
 	}
-		}
+}

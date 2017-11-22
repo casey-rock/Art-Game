@@ -18,12 +18,12 @@ public class p2pickUp : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
 	{
 		if(col.gameObject.name == "Player2")
-	{
+		{
 			Debug.Log("hit");
 
-		playerInTrigger = true;
+			playerInTrigger = true;
 	
-	}
+		}
 
 	}
 	//this detects if player has left the 'hit area' and disbales ability to pick up object
@@ -42,7 +42,7 @@ public class p2pickUp : MonoBehaviour {
 
 //this says if player is in 'hit area' and they press the right key, they will pick up object
 	void Update(){
-		if(playerInTrigger && (Input.GetKeyDown("tab") || Input.GetButtonDown("Submit"))){
+		if(playerInTrigger && (Input.GetKeyDown("tab") || Input.GetButtonDown("Submit1"))){
            item.GetComponent<Rigidbody>().useGravity = false;
 		item.GetComponent<Rigidbody>().isKinematic = true;
 		item.transform.position = guide.transform.position;
