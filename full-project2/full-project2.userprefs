@@ -1,10 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\p1drop.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameOver.cs">
     <Files>
-      <File FileName="Assets\Scripts\p2pickUp.cs" Line="15" Column="15" />
-      <File FileName="Assets\Scripts\p2drop.cs" Line="57" Column="33" />
-      <File FileName="Assets\Scripts\p1drop.cs" Line="56" Column="34" />
+      <File FileName="Assets\Scripts\p2pickUp.cs" Line="51" Column="65" />
+      <File FileName="Assets\Scripts\p2drop.cs" Line="61" Column="74" />
+      <File FileName="Assets\Scripts\p1drop.cs" Line="56" Column="205" />
+      <File FileName="Assets\Scripts\p1pickup.cs" Line="51" Column="63" />
+      <File FileName="Assets\Scripts\player1.cs" Line="10" Column="31" />
+      <File FileName="Assets\Scripts\player2.cs" Line="8" Column="31" />
+      <File FileName="Assets\Scripts\GameOver.cs" Line="36" Column="50" />
+      <File FileName="Assets\Scripts\p1scoreControl.cs" Line="20" Column="49" />
+      <File FileName="Assets\Scripts\p2scoreControl.cs" Line="23" Column="80" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

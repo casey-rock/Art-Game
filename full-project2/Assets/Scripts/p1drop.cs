@@ -21,7 +21,10 @@ public class p1drop : MonoBehaviour {
 	bool playerInTrigger; ///this is used to indicate player is in 'drop zone'
 
 
+
+
 void Start () {
+
         GameObject gameControllerObject = GameObject.FindWithTag ("GameController1");
         if (gameControllerObject != null) {
             gameController1 = gameControllerObject.GetComponent <p1scoreControl>();	}
@@ -50,12 +53,13 @@ void Start () {
 //this says if player is in 'drop area' and they press the right key, they will pick up object
 	void Update(){
 
-		if(playerInTrigger && (Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.RightShift)) && item.transform.IsChildOf(tempParent.transform)){
+		if(playerInTrigger && (Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.RightShift)) && item.transform.IsChildOf(tempParent.transform) && GameObject.Find("Player1").GetComponent<player1>().isPicked){
 			item.GetComponent<Rigidbody>().useGravity = false;
 			item.GetComponent<Rigidbody>().isKinematic = false;
 			item.transform.SetParent(drop);
 			item.transform.position = drop.transform.position;
 			Destroy(item.GetComponent<Collider>());
+			GameObject.Find("Player1").GetComponent<player1>().isPicked = false; //sets the isPicked in p1pickup.cs to false so the player can pick up another piece
 			gameController1.AddScore (-1);
 			}
 				

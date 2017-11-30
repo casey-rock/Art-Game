@@ -42,12 +42,13 @@ public class p2pickUp : MonoBehaviour {
 
 //this says if player is in 'hit area' and they press the right key, they will pick up object
 	void Update(){
-		if(playerInTrigger && (Input.GetKeyDown("tab") || Input.GetButtonDown("Submit1"))){
+		if(playerInTrigger && (Input.GetKeyDown("tab") || Input.GetButtonDown("Submit1")) && !GameObject.Find("Player2").GetComponent<player2>().isPicked){
            item.GetComponent<Rigidbody>().useGravity = false;
 		item.GetComponent<Rigidbody>().isKinematic = true;
 		item.transform.position = guide.transform.position;
 		item.transform.rotation = guide.transform.rotation;
 		item.transform.parent = tempParent.transform;
+			GameObject.Find ("Player2").GetComponent<player2> ().isPicked = true;
 	}
 	}
 }

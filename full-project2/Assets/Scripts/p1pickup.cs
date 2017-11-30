@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class p1pickup : MonoBehaviour {
 
-		public GameObject item; //oject we want to grab
+	public GameObject item; //oject we want to grab
 	public GameObject tempParent;  //object we want to attached it to when picked up until its dropped
 	public Transform guide;  //position we want it to sit when picked up this is another empty object that is attached to a player
 
@@ -42,12 +42,13 @@ public class p1pickup : MonoBehaviour {
 
 //this says if player is in 'hit area' and they press the right key, they will pick up object
 	void Update(){
-		if(playerInTrigger && (Input.GetKeyDown("enter") || Input.GetButtonDown("Submit"))){
+		if(playerInTrigger && (Input.GetKeyDown("enter") || Input.GetButtonDown("Submit")) && !GameObject.Find("Player1").GetComponent<player1>().isPicked){
            item.GetComponent<Rigidbody>().useGravity = false;
-		item.GetComponent<Rigidbody>().isKinematic = true;
+			item.GetComponent<Rigidbody>().isKinematic = true;
 		item.transform.position = guide.transform.position;
-		item.transform.rotation = guide.transform.rotation;
+			item.transform.rotation = guide.transform.rotation;
 		item.transform.parent = tempParent.transform;
+			GameObject.Find("Player1").GetComponent<player1>().isPicked = true;
 	}
 	}
 }

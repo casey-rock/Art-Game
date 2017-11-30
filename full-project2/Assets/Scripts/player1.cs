@@ -7,6 +7,8 @@ public class player1 : MonoBehaviour
 	Rigidbody m_Rigidbody;
 	float m_Speed;
 
+	public bool isPicked = false;
+
 	void Start ()
 	{
 		//Fetch the Rigidbody component you attach from your GameObject

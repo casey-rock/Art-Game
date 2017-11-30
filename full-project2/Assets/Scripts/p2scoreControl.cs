@@ -18,4 +18,9 @@ score += newScoreValue; UpdateScore ();	}
 
    void UpdateScore () {
 	Text scoreTextB = textGameObject.GetComponent<Text>();
-	scoreTextB.text = "Art Pieces to Collect:" + score;	}	}
+	scoreTextB.text = "Art Pieces to Collect:" + score;	
+		if (score == 0) {
+			GameObject.Find ("GameOverController").GetComponent<GameOver> ().gameOver_P2 = true;
+		}
+	}	
+}
