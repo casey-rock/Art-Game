@@ -24,7 +24,7 @@ public class p1drop : MonoBehaviour {
 
 
 void Start () {
-
+		playerInTrigger = false;
         GameObject gameControllerObject = GameObject.FindWithTag ("GameController1");
         if (gameControllerObject != null) {
             gameController1 = gameControllerObject.GetComponent <p1scoreControl>();	}

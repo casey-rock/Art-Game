@@ -14,6 +14,10 @@ public class p1pickup : MonoBehaviour {
 
 	bool playerInTrigger; ///this is used to indicate player is in 'hit zone'
 
+	void Start(){
+		playerInTrigger = false;
+	}
+
 //this detect if player 1 is in 'hit area' to pick up object
 	void OnTriggerEnter (Collider col)
 	{
@@ -49,6 +53,7 @@ public class p1pickup : MonoBehaviour {
 			item.transform.rotation = guide.transform.rotation;
 		item.transform.parent = tempParent.transform;
 			GameObject.Find("Player1").GetComponent<player1>().isPicked = true;
+			playerInTrigger = false;
 	}
 	}
 }

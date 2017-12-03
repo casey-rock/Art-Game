@@ -24,6 +24,7 @@ public class p2drop : MonoBehaviour {
 
 
 void Start () {
+		playerInTrigger = false;
         GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
         if (gameControllerObject != null) {
             gameController = gameControllerObject.GetComponent <p2scoreControl>();	}
