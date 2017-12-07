@@ -11,19 +11,20 @@ public class p2pickUp : MonoBehaviour {
 		public GameObject item; //oject we want to grab
 	public GameObject tempParent;  //object we want to attached it to when picked up until its dropped
 	public Transform guide;  //position we want it to sit when picked up this is another empty object that is attached to a player
+	public Vector3 originalPosition;
 
 	bool playerInTrigger; ///this is used to indicate player is in 'hit zone'
 
 
 	void Start() {
 		playerInTrigger = false;
+		originalPosition = item.transform.position;
 	}
 //this detect if player 1 is in 'hit area' to pick up object
 	void OnTriggerEnter (Collider col)
 	{
 		if(col.gameObject.name == "Player2")
 		{
-			Debug.Log("hit");
 
 			playerInTrigger = true;
 	
@@ -35,7 +36,6 @@ public class p2pickUp : MonoBehaviour {
 	{
 		if(col.gameObject.name == "Player2")
 	{
-			Debug.Log("exit");
 
 		playerInTrigger = false;
 	
@@ -53,6 +53,7 @@ public class p2pickUp : MonoBehaviour {
 		item.transform.rotation = guide.transform.rotation;
 		item.transform.parent = tempParent.transform;
 			GameObject.Find ("Player2").GetComponent<player2> ().isPicked = true;
+			GameObject.Find ("Player2").GetComponent<player2> ().GetItem (item);
 			playerInTrigger = false;
 	}
 	}

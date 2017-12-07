@@ -1,24 +1,17 @@
-﻿<Properties StartupItem="full-project2.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\p1pickup.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player2.cs">
     <Files>
-      <File FileName="Assets\Scripts\p2pickUp.cs" Line="19" Column="27" />
+      <File FileName="Assets\Scripts\p2pickUp.cs" Line="21" Column="46" />
       <File FileName="Assets\Scripts\p2drop.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\p1drop.cs" Line="27" Column="27" />
-      <File FileName="Assets\Scripts\p1pickup.cs" Line="18" Column="27" />
-      <File FileName="Assets\Scripts\player1.cs" Line="60" Column="12" />
-      <File FileName="Assets\Scripts\player2.cs" Line="58" Column="12" />
+      <File FileName="Assets\Scripts\p1pickup.cs" Line="20" Column="46" />
+      <File FileName="Assets\Scripts\player1.cs" Line="19" Column="15" />
+      <File FileName="Assets\Scripts\player2.cs" Line="44" Column="1" />
       <File FileName="Assets\Scripts\GameOver.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\p1scoreControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\p2scoreControl.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="full-project2" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -6,19 +6,41 @@ public class player2 : MonoBehaviour
 	float m_Speed;
 
 	public bool isPicked;
+	private GameObject myPainting;
 
 	void Start ()
 	{
 		//Fetch the Rigidbody component you attach from your GameObject
 		m_Rigidbody = GetComponent<Rigidbody> ();
 		//Set the speed of the GameObject
-		m_Speed = 50.0f;
+		m_Speed = 100.0f;
 
 		isPicked = false;
+		myPainting = null;
+	}
+
+	public void GetItem(GameObject item) 
+	{
+		// set myPainting to the item passed in from argument "item"
+		myPainting = item;
+	}
+
+	public void dropItem()
+	{
+		myPainting.transform.position = myPainting.GetComponent<p2pickUp>().originalPosition;
+		myPainting.GetComponent<p2pickUp> ().transform.parent = GameObject.Find ("p1pick").transform;
+		GameObject.Find("Player2").GetComponent<player2>().isPicked = false;
+
+		// drop the painting and reset the player's variable
+		myPainting = null;
+		// add code to reset painting to original spot
 	}
 
 	void Update ()
 	{
+		if (Input.GetKey (KeyCode.O)) {
+			dropItem ();
+		}
 		if (Input.GetAxis("LeftJoystickX_P2") > 0 || Input.GetKey(KeyCode.T)) {
 			m_Rigidbody.velocity = transform.right * m_Speed;
 		}
@@ -57,7 +79,7 @@ public class player2 : MonoBehaviour
 		//if player2 bumps and p1 is holding a painting, send the painting back
 		if (col.gameObject.name == "Player1" && isPicked) {
 			//find which piece of the painting it is
-
+			dropItem();
 			//send it back
 		}
 	}
