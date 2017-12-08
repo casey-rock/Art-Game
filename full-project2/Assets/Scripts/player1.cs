@@ -63,7 +63,7 @@ public class player1 : MonoBehaviour
 			m_Rigidbody.velocity = -transform.forward * m_Speed;
 		}
 
-		if (Input.GetAxis("LeftJoystickY") == 0 && !(Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.DownArrow))) {
+		if (Input.GetAxis("LeftJoystickY") == 0 && !(Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.DownArrow)) && Input.GetAxis("LeftJoystickX") == 0 && !Input.GetKey(KeyCode.E) && !Input.GetKey(KeyCode.Q)) {
 			//Stop the Rigidbody
 			m_Rigidbody.velocity = transform.forward * 0;
 		}
