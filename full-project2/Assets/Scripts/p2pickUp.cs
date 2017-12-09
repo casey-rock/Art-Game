@@ -12,6 +12,7 @@ public class p2pickUp : MonoBehaviour {
 	public GameObject tempParent;  //object we want to attached it to when picked up until its dropped
 	public Transform guide;  //position we want it to sit when picked up this is another empty object that is attached to a player
 	public Vector3 originalPosition;
+	public Quaternion originalRotation;
 
 	bool playerInTrigger; ///this is used to indicate player is in 'hit zone'
 
@@ -19,6 +20,7 @@ public class p2pickUp : MonoBehaviour {
 	void Start() {
 		playerInTrigger = false;
 		originalPosition = item.transform.position;
+		originalRotation = item.transform.rotation;
 	}
 //this detect if player 1 is in 'hit area' to pick up object
 	void OnTriggerEnter (Collider col)

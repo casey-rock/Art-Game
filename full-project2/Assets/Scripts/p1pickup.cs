@@ -10,6 +10,7 @@ public class p1pickup : MonoBehaviour {
 
 	public GameObject item; //oject we want to grab
 	public Vector3 originalPosition; //Original position of the item
+	public Quaternion originalRotation;
 	public GameObject tempParent;  //object we want to attached it to when picked up until its dropped
 	public Transform guide;  //position we want it to sit when picked up this is another empty object that is attached to a player
 
@@ -18,6 +19,7 @@ public class p1pickup : MonoBehaviour {
 	void Start(){
 		playerInTrigger = false;
 		originalPosition = item.transform.position;
+		originalRotation = item.transform.rotation;
 	}
 
 //this detect if player 1 is in 'hit area' to pick up object

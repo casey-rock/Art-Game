@@ -39,7 +39,6 @@ void Start () {
 		if(col.gameObject.name == "Player2")
 		{
 
-			Debug.Log("hitDrops");
 
 			playerInTrigger = true;
 		}
@@ -57,6 +56,7 @@ void Start () {
 			item.GetComponent<Rigidbody>().isKinematic = false;
 			item.transform.SetParent(drop);
 			item.transform.position = drop.transform.position;
+			item.transform.eulerAngles = new Vector3 (0, 90, 0); //rotation of the wall on which the last supper resides
 			Destroy(item.GetComponent<Collider>());
 			gameController.AddScore (-1);
 			GameObject.Find ("Player2").GetComponent<player2> ().isPicked = false;

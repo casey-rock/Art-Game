@@ -25,21 +25,13 @@ public class GameOver : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameOver_P1) {
-			Text gameOverText = gameOverTextGO.GetComponent<Text> ();
-			gameOverText.text = "Game Over! Player 1 Wins!";
-			Text restartText = restartTextGO.GetComponent<Text> ();
-			restartText.text = "Press 'R' on keyboard or 'A' on gamepad to restart";
 			restart = true;
 		} else if (gameOver_P2) {
-			Text gameOverText = gameOverTextGO.GetComponent<Text> ();
-			gameOverText.text = "Game Over! Player 2 Wins!";
-			Text restartText = restartTextGO.GetComponent<Text> ();
-			restartText.text = "Press 'R' on keyboard or 'A' on gamepad to restart";
 			restart = true;
 		}
 
 		if (restart) {
-			if (Input.GetKeyDown (KeyCode.R) || Input.GetButton ("Submit") || Input.GetButton ("Submit1")) {
+			if (Input.GetKeyDown (KeyCode.R) || Input.GetButton ("Game_Cancel")) {
 				SceneManager.LoadScene ("3d area");
 			}
 		}

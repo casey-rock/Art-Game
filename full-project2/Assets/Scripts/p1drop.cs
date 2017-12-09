@@ -39,7 +39,6 @@ void Start () {
 		if(col.gameObject.name == "Player1")
 		{
 
-			Debug.Log("hitDrops");
 
 			playerInTrigger = true;
 		}
@@ -58,6 +57,7 @@ void Start () {
 			item.GetComponent<Rigidbody>().isKinematic = false;
 			item.transform.SetParent(drop);
 			item.transform.position = drop.transform.position;
+			item.transform.eulerAngles = new Vector3 (0, 90, 0); //rotation of the wall on which painting resides
 			Destroy(item.GetComponent<Collider>());
 			GameObject.Find("Player1").GetComponent<player1>().isPicked = false; //sets the isPicked in p1pickup.cs to false so the player can pick up another piece
 			gameController1.AddScore (-1);

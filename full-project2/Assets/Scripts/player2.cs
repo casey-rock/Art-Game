@@ -28,6 +28,7 @@ public class player2 : MonoBehaviour
 	public void dropItem()
 	{
 		myPainting.transform.position = myPainting.GetComponent<p2pickUp>().originalPosition;
+		myPainting.transform.rotation = myPainting.GetComponent<p2pickUp> ().originalRotation;
 		myPainting.GetComponent<p2pickUp> ().transform.parent = GameObject.Find ("p1pick").transform;
 		GameObject.Find("Player2").GetComponent<player2>().isPicked = false;
 

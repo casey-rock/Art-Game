@@ -17,11 +17,19 @@ int newScoreValue) {
 score += newScoreValue; UpdateScore ();	}
 
    void UpdateScore () {
-	Text scoreTextB = textGameObject.GetComponent<Text>();
-	scoreTextB.text = "Art Pieces to Collect:" + score;	
-	
+		Text scoreTextB = textGameObject.GetComponent<Text> ();
 		if (score == 0) {
+			
+			Text scoreTextB_P2 = GameObject.Find ("GameController").GetComponent<p2scoreControl> ().textGameObject.GetComponent<Text>();
 			GameObject.Find ("GameOverController").GetComponent<GameOver> ().gameOver_P1 = true;
+			scoreTextB.text = "Game Over, P1 Wins!" +
+				" Press B Button or R Key to Restart";
+
+			scoreTextB_P2.text = "Game Over, P1 Wins!" +
+				" Press B Button or R Key to Restart";
+		} else {
+			scoreTextB.text = "Art Pieces to Collect:" + score;	
 		}
+
 	}	
 }
