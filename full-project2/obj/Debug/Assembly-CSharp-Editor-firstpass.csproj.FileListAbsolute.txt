@@ -166,3 +166,7 @@ C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEdit
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-Editor-firstpass.dll
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-Editor-firstpass.pdb
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEditor.GoogleAudioSpatializer.dll
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEditor.GoogleAudioSpatializer.xml
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEngine.SpatialTracking.xml

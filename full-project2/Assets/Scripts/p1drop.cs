@@ -38,7 +38,7 @@ void Start () {
 	{
 		if(col.gameObject.name == "Player1")
 		{
-
+			Debug.Log ("Hit drops");
 
 			playerInTrigger = true;
 		}

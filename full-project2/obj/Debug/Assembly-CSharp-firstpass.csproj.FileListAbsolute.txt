@@ -123,3 +123,5 @@ C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEngi
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Catnip\Documents\Github\Art-Game\full-project2\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
+C:\Users\Catnip\Documents\Github\Art-Game\full-project2\Temp\bin\Debug\UnityEngine.SpatialTracking.xml

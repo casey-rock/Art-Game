@@ -13,10 +13,10 @@ public class p1pickup : MonoBehaviour {
 	public Quaternion originalRotation;
 	public GameObject tempParent;  //object we want to attached it to when picked up until its dropped
 	public Transform guide;  //position we want it to sit when picked up this is another empty object that is attached to a player
-
 	bool playerInTrigger; ///this is used to indicate player is in 'hit zone'
 
 	void Start(){
+		
 		playerInTrigger = false;
 		originalPosition = item.transform.position;
 		originalRotation = item.transform.rotation;
