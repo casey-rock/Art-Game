@@ -18,7 +18,7 @@ score += newScoreValue; UpdateScore ();	}
 
    void UpdateScore () {
 		Text scoreTextB = textGameObject.GetComponent<Text> ();
-		if (score == 0) {
+		if (score <= 0) {
 
 			Text scoreTextB_P1 = GameObject.Find ("GameController1").GetComponent<p1scoreControl> ().textGameObject.GetComponent<Text> ();
 			GameObject.Find ("GameOverController").GetComponent<GameOver> ().gameOver_P2 = true;
