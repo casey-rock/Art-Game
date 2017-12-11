@@ -9,7 +9,7 @@ public class p1scoreControl : MonoBehaviour {
    private int score;
    
    void Start () {
-score = 4; 
+score = 5; 
 UpdateScore ();	 }
    
    public void AddScore (
