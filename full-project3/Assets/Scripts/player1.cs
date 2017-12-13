@@ -99,6 +99,7 @@ public class player1 : MonoBehaviour
 		if (col.gameObject.name == "Player2" && isPicked) {
 			dropItem ();
 			anim.SetTrigger ("bump");
+			GameObject.Find ("Player2").GetComponent<player2> ().anim.SetTrigger ("bump");
 		}
 	}
 
