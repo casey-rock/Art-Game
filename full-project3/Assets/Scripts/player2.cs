@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class player2 : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class player2 : MonoBehaviour
 	public Animator anim;
 	Rigidbody rigidbody;
 
+	public Transform particle;
 
 	Rigidbody m_Rigidbody;
 	float m_Speed;
@@ -16,7 +18,7 @@ public class player2 : MonoBehaviour
 
 	void Start ()
 	{
-
+		particle.GetComponent<ParticleSystem> ().enableEmission = false;
 		anim = gameObject.GetComponentInChildren<Animator>();
 		rigidbody =gameObject.GetComponent<Rigidbody>();
 
@@ -98,9 +100,17 @@ public class player2 : MonoBehaviour
 		//if player2 bumps and p1 is holding a painting, send the painting back
 		if (col.gameObject.name == "Player1" && isPicked) {
 			dropItem ();
+			particle.GetComponent<ParticleSystem> ().enableEmission = true;
+			StartCoroutine (stopParticles ());
 			anim.SetTrigger ("bump");
 			GameObject.Find ("Player1").GetComponent<player1> ().anim.SetTrigger ("bump");
 		}
+	}
+
+	IEnumerator stopParticles()
+	{
+		yield return new WaitForSeconds (.4f);
+		particle.GetComponent<ParticleSystem> ().enableEmission = false;
 	}
 
 	/*

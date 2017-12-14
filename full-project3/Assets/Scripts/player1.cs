@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class player1 : MonoBehaviour
 {
 	//create bullet
 	public Animator anim;
+	public Transform particle;
 	Rigidbody rigidbody;
-
 
 	Rigidbody m_Rigidbody;
 	float m_Speed;
@@ -16,7 +17,7 @@ public class player1 : MonoBehaviour
 
 	void Start ()
 	{
-
+		particle.GetComponent<ParticleSystem> ().enableEmission = false;
 		anim = gameObject.GetComponentInChildren<Animator>();
 		rigidbody =gameObject.GetComponent<Rigidbody>();
 
@@ -98,9 +99,17 @@ public class player1 : MonoBehaviour
 		//if player2 bumps and p1 is holding a painting, send the painting back
 		if (col.gameObject.name == "Player2" && isPicked) {
 			dropItem ();
+			particle.GetComponent<ParticleSystem> ().enableEmission = true;
+			StartCoroutine (stopParticles ());
 			anim.SetTrigger ("bump");
 			GameObject.Find ("Player2").GetComponent<player2> ().anim.SetTrigger ("bump");
 		}
+	}
+
+	IEnumerator stopParticles()
+	{
+		yield return new WaitForSeconds (.4f);
+		particle.GetComponent<ParticleSystem> ().enableEmission = false;
 	}
 
 	/*
